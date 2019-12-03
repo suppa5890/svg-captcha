@@ -116,3 +116,10 @@ export const options: ConfigObject;
  * @return {string}
  */
 export function randomText(size: number): string;
+
+/**
+ * return a random string
+ * @param {number} size
+ * @return {string}
+ */
+export function createCaptchaCustom(text: string, options?: ConfigObject): string;
