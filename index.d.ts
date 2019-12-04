@@ -122,4 +122,4 @@ export function randomText(size: number): string;
  * @param {number} size
  * @return {string}
  */
-export function createCaptchaCustom(text: string, options?: ConfigObject): string;
+export function createCaptchaCustom(text: [], options?: ConfigObject): string;
