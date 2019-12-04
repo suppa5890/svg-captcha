@@ -84,6 +84,21 @@ interface CaptchaObj {
 	data: string
 }
 /**
+ * result of random math expression generation
+ */
+interface MathObj {
+	/**
+	 * the value text,
+	 *
+	 */
+	text: string,
+	/**
+	 * the equation string,
+	 *
+	 */
+	equation: string
+}
+/**
  * This method returns a object that has two props:
  * data: svg image string
  * text: captcha text
@@ -122,4 +137,12 @@ export function randomText(size: number): string;
  * @param {number} size
  * @return {string}
  */
-export function createCaptchaCustom(text: [], options?: ConfigObject): string;
+export function createCaptchaCustom(text: string[], options?: ConfigObject): string;
+
+/**
+ * returns
+ * @param mathMin
+ * @param mathMax
+ * @param mathOperator
+ */
+export function generateRandomMathText(mathMin: number, mathMax: number, mathOperator: string): MathObj;
